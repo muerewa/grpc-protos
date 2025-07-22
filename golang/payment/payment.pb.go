@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.36.6
 // 	protoc        v3.21.12
-// source: payment.proto
+// source: payment/payment.proto
 
 package paymentpb
 
@@ -30,7 +30,7 @@ type CreatePaymentRequest struct {
 
 func (x *CreatePaymentRequest) Reset() {
 	*x = CreatePaymentRequest{}
-	mi := &file_payment_proto_msgTypes[0]
+	mi := &file_payment_payment_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -42,7 +42,7 @@ func (x *CreatePaymentRequest) String() string {
 func (*CreatePaymentRequest) ProtoMessage() {}
 
 func (x *CreatePaymentRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_payment_proto_msgTypes[0]
+	mi := &file_payment_payment_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -55,7 +55,7 @@ func (x *CreatePaymentRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreatePaymentRequest.ProtoReflect.Descriptor instead.
 func (*CreatePaymentRequest) Descriptor() ([]byte, []int) {
-	return file_payment_proto_rawDescGZIP(), []int{0}
+	return file_payment_payment_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *CreatePaymentRequest) GetPrice() float32 {
@@ -74,7 +74,7 @@ type CreatePaymentResponse struct {
 
 func (x *CreatePaymentResponse) Reset() {
 	*x = CreatePaymentResponse{}
-	mi := &file_payment_proto_msgTypes[1]
+	mi := &file_payment_payment_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -86,7 +86,7 @@ func (x *CreatePaymentResponse) String() string {
 func (*CreatePaymentResponse) ProtoMessage() {}
 
 func (x *CreatePaymentResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_payment_proto_msgTypes[1]
+	mi := &file_payment_payment_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -99,7 +99,7 @@ func (x *CreatePaymentResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreatePaymentResponse.ProtoReflect.Descriptor instead.
 func (*CreatePaymentResponse) Descriptor() ([]byte, []int) {
-	return file_payment_proto_rawDescGZIP(), []int{1}
+	return file_payment_payment_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *CreatePaymentResponse) GetBillId() int64 {
@@ -109,11 +109,11 @@ func (x *CreatePaymentResponse) GetBillId() int64 {
 	return 0
 }
 
-var File_payment_proto protoreflect.FileDescriptor
+var File_payment_payment_proto protoreflect.FileDescriptor
 
-const file_payment_proto_rawDesc = "" +
+const file_payment_payment_proto_rawDesc = "" +
 	"\n" +
-	"\rpayment.proto\x12\border.v1\",\n" +
+	"\x15payment/payment.proto\x12\border.v1\",\n" +
 	"\x14CreatePaymentRequest\x12\x14\n" +
 	"\x05price\x18\x01 \x01(\x02R\x05price\"0\n" +
 	"\x15CreatePaymentResponse\x12\x17\n" +
@@ -122,23 +122,23 @@ const file_payment_proto_rawDesc = "" +
 	"\x06Create\x12\x1e.order.v1.CreatePaymentRequest\x1a\x1f.order.v1.CreatePaymentResponse\"\x00B9Z7github.com/muerewa/grpc-protos/golang/payment;paymentpbb\x06proto3"
 
 var (
-	file_payment_proto_rawDescOnce sync.Once
-	file_payment_proto_rawDescData []byte
+	file_payment_payment_proto_rawDescOnce sync.Once
+	file_payment_payment_proto_rawDescData []byte
 )
 
-func file_payment_proto_rawDescGZIP() []byte {
-	file_payment_proto_rawDescOnce.Do(func() {
-		file_payment_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_payment_proto_rawDesc), len(file_payment_proto_rawDesc)))
+func file_payment_payment_proto_rawDescGZIP() []byte {
+	file_payment_payment_proto_rawDescOnce.Do(func() {
+		file_payment_payment_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_payment_payment_proto_rawDesc), len(file_payment_payment_proto_rawDesc)))
 	})
-	return file_payment_proto_rawDescData
+	return file_payment_payment_proto_rawDescData
 }
 
-var file_payment_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_payment_proto_goTypes = []any{
+var file_payment_payment_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_payment_payment_proto_goTypes = []any{
 	(*CreatePaymentRequest)(nil),  // 0: order.v1.CreatePaymentRequest
 	(*CreatePaymentResponse)(nil), // 1: order.v1.CreatePaymentResponse
 }
-var file_payment_proto_depIdxs = []int32{
+var file_payment_payment_proto_depIdxs = []int32{
 	0, // 0: order.v1.PaymentService.Create:input_type -> order.v1.CreatePaymentRequest
 	1, // 1: order.v1.PaymentService.Create:output_type -> order.v1.CreatePaymentResponse
 	1, // [1:2] is the sub-list for method output_type
@@ -148,26 +148,26 @@ var file_payment_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_payment_proto_init() }
-func file_payment_proto_init() {
-	if File_payment_proto != nil {
+func init() { file_payment_payment_proto_init() }
+func file_payment_payment_proto_init() {
+	if File_payment_payment_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_payment_proto_rawDesc), len(file_payment_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_payment_payment_proto_rawDesc), len(file_payment_payment_proto_rawDesc)),
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_payment_proto_goTypes,
-		DependencyIndexes: file_payment_proto_depIdxs,
-		MessageInfos:      file_payment_proto_msgTypes,
+		GoTypes:           file_payment_payment_proto_goTypes,
+		DependencyIndexes: file_payment_payment_proto_depIdxs,
+		MessageInfos:      file_payment_payment_proto_msgTypes,
 	}.Build()
-	File_payment_proto = out.File
-	file_payment_proto_goTypes = nil
-	file_payment_proto_depIdxs = nil
+	File_payment_payment_proto = out.File
+	file_payment_payment_proto_goTypes = nil
+	file_payment_payment_proto_depIdxs = nil
 }
