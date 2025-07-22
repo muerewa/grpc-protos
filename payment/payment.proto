@@ -1,6 +1,7 @@
 syntax = "proto3";
+package order.v1;
 
-option go_package="github.com/muerewa/grpc-protos/payment";
+option go_package="github.com/muerewa/grpc-protos/golang/payment;paymentpb";
 
 message CreatePaymentRequest {
   float price = 1;
