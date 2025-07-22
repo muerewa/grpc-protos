@@ -7,8 +7,6 @@ RELEASE_VERSION=$2
 
 echo "Generating Go source code"
 mkdir -p golang
-go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
-go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 
 protoc --go_out=./golang \
   --go_opt=paths=source_relative \
