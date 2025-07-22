@@ -16,7 +16,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
-          go-version: 1.22
+          go-version: 1.24.4
 
       - name: Install protoc & plugins
         run: |
@@ -31,7 +31,7 @@ jobs:
           # Очистить прошлую генерацию
           rm -rf golang
           # Создать каталоги модулей
-          for pkg in order payment shipping; do
+          for pkg in order payment; do
             mkdir -p "golang/${pkg}"
             protoc \
               --go_out=golang/${pkg} --go_opt=paths=source_relative \
