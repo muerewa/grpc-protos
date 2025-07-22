@@ -1,6 +1,6 @@
 #!/bin/bash
-GITHUB_USERNAME="ffsocietyy@protonmail.com"
-GITHUB_EMAIL="muerewa"
+GITHUB_USERNAME="muerewaf"
+GITHUB_EMAIL="fsocietyy@protonmail.com"
 
 SERVICE_NAME=$1
 RELEASE_VERSION=$2
